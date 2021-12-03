@@ -1,2 +1,2 @@
 # AdventOfCode2021
-My Advent of Code 2021 enteries
+My Advent of Code 2021 entries
