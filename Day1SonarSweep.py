@@ -1,11 +1,13 @@
-counter = 0
 depth_increase = 0
-reading1 = int(input())
-while counter < 10:
-    reading2 = int(input())
-    if reading1 < reading2:
+
+input_file = open('SonarSweepPuzzleInput.txt','r')
+readings = input_file.readlines()
+
+reading1 = 500
+for reading in readings:
+    reading2 = int(reading)
+    if reading2 > reading1:
         depth_increase += 1
     reading1 = reading2
-    counter += 1
 
-print ("There was", depth_increase, "increases of depth in the sonar sweep.")
+print ("The number of times the readings increased is:", depth_increase)
