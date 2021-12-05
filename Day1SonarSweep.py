@@ -15,4 +15,11 @@ for reading in readings:
 print ("The number of times the readings increased is:", depth_increase)
 
 #part 2
-print (len(readings))
+depth_increase = 0
+for i in range (0, len(readings)-3):
+    exiting = int(readings[i])
+    entering = int(readings[i+3])
+    if exiting < entering:
+        depth_increase += 1
+
+print ("The total times the sliding window increased was:", depth_increase)
